@@ -20,6 +20,20 @@
       background-color: #000000;
       overflow: hidden;
     }
+
+    #no-webgl {
+      display: none;
+      color: #ffffff;
+      font-family: sans-serif;
+    }
+
+    #no-webgl a {
+      color: #3333ff;
+    }
+
+    #no-webgl a:visited {
+      color: #3333ff;
+    }
   </style>
   <script>
     function getGl() {
@@ -30,7 +44,7 @@
 </head>
 
 <body>
-  <div id="no-webgl" style="display:none;">
+  <div id="no-webgl">
     <h1>Sorry, webgl not supported</h1>
     <p>Webgl doesn't seem to be supported in your browser.
       <br>You could try another browser such as

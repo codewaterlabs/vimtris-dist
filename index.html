@@ -31,6 +31,20 @@
 
 <body>
   <script src="./dist/main.js"></script>
+  <div id="no-webgl" style="display:none;">
+    <h1>Sorry, webgl not supported</h1>
+    <p>Webgl doesn't seem to be supported in your browser.
+      <br>You could try another browser such as
+      <a href="https://www.google.com/chrome/">Chrome</a> or
+      <a href="https://www.mozilla.org/en-US/firefox/">Firefox</a>.
+    </p>
+  </div>
+  <script>
+    var gl = getGl();
+    if (!gl || !(gl instanceof WebGLRenderingContext)) {
+      document.getElementById('no-webgl').style.display = 'block';
+    }
+  </script>
 </body>
 
 </html>

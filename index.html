@@ -30,7 +30,6 @@
 </head>
 
 <body>
-  <script src="./dist/main.js"></script>
   <div id="no-webgl" style="display:none;">
     <h1>Sorry, webgl not supported</h1>
     <p>Webgl doesn't seem to be supported in your browser.
@@ -40,11 +39,13 @@
     </p>
   </div>
   <script>
-    var gl = getGl();
+    var canvas = document.createElement("canvas");
+    var gl = canvas.getContext("webgl");
     if (!gl || !(gl instanceof WebGLRenderingContext)) {
       document.getElementById('no-webgl').style.display = 'block';
     }
   </script>
+  <script src="./dist/main.js"></script>
 </body>
 
 </html>
